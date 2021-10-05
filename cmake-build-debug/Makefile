@@ -129,6 +129,30 @@ demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
 .PHONY : demo/fast
 
+src/app.o: src/app.cpp.o
+.PHONY : src/app.o
+
+# target to build an object file
+src/app.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/app.cpp.o
+.PHONY : src/app.cpp.o
+
+src/app.i: src/app.cpp.i
+.PHONY : src/app.i
+
+# target to preprocess a source file
+src/app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/app.cpp.i
+.PHONY : src/app.cpp.i
+
+src/app.s: src/app.cpp.s
+.PHONY : src/app.s
+
+# target to generate assembly for a file
+src/app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/app.cpp.s
+.PHONY : src/app.cpp.s
+
 src/index.o: src/index.cpp.o
 .PHONY : src/index.o
 
@@ -152,6 +176,30 @@ src/index.s: src/index.cpp.s
 src/index.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/index.cpp.s
 .PHONY : src/index.cpp.s
+
+src/process.o: src/process.cpp.o
+.PHONY : src/process.o
+
+# target to build an object file
+src/process.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/process.cpp.o
+.PHONY : src/process.cpp.o
+
+src/process.i: src/process.cpp.i
+.PHONY : src/process.i
+
+# target to preprocess a source file
+src/process.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/process.cpp.i
+.PHONY : src/process.cpp.i
+
+src/process.s: src/process.cpp.s
+.PHONY : src/process.s
+
+# target to generate assembly for a file
+src/process.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/process.cpp.s
+.PHONY : src/process.cpp.s
 
 src/util.o: src/util.cpp.o
 .PHONY : src/util.o
@@ -177,6 +225,30 @@ src/util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/util.cpp.s
 .PHONY : src/util.cpp.s
 
+src/v8_type.o: src/v8_type.cpp.o
+.PHONY : src/v8_type.o
+
+# target to build an object file
+src/v8_type.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/v8_type.cpp.o
+.PHONY : src/v8_type.cpp.o
+
+src/v8_type.i: src/v8_type.cpp.i
+.PHONY : src/v8_type.i
+
+# target to preprocess a source file
+src/v8_type.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/v8_type.cpp.i
+.PHONY : src/v8_type.cpp.i
+
+src/v8_type.s: src/v8_type.cpp.s
+.PHONY : src/v8_type.s
+
+# target to generate assembly for a file
+src/v8_type.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/v8_type.cpp.s
+.PHONY : src/v8_type.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... demo"
+	@echo "... src/app.o"
+	@echo "... src/app.i"
+	@echo "... src/app.s"
 	@echo "... src/index.o"
 	@echo "... src/index.i"
 	@echo "... src/index.s"
+	@echo "... src/process.o"
+	@echo "... src/process.i"
+	@echo "... src/process.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"
+	@echo "... src/v8_type.o"
+	@echo "... src/v8_type.i"
+	@echo "... src/v8_type.s"
 .PHONY : help
 
 

@@ -66,9 +66,22 @@ include CMakeFiles/demo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/demo.dir/flags.make
 
+CMakeFiles/demo.dir/src/app.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/app.cpp.o: ../src/app.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/src/app.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/app.cpp.o -c /Users/huruji/repos/v8-with-libuv/src/app.cpp
+
+CMakeFiles/demo.dir/src/app.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/app.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/huruji/repos/v8-with-libuv/src/app.cpp > CMakeFiles/demo.dir/src/app.cpp.i
+
+CMakeFiles/demo.dir/src/app.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/app.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huruji/repos/v8-with-libuv/src/app.cpp -o CMakeFiles/demo.dir/src/app.cpp.s
+
 CMakeFiles/demo.dir/src/index.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/index.cpp.o: ../src/index.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/src/index.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo.dir/src/index.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/index.cpp.o -c /Users/huruji/repos/v8-with-libuv/src/index.cpp
 
 CMakeFiles/demo.dir/src/index.cpp.i: cmake_force
@@ -79,9 +92,22 @@ CMakeFiles/demo.dir/src/index.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/index.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huruji/repos/v8-with-libuv/src/index.cpp -o CMakeFiles/demo.dir/src/index.cpp.s
 
+CMakeFiles/demo.dir/src/process.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/process.cpp.o: ../src/process.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/src/process.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/process.cpp.o -c /Users/huruji/repos/v8-with-libuv/src/process.cpp
+
+CMakeFiles/demo.dir/src/process.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/process.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/huruji/repos/v8-with-libuv/src/process.cpp > CMakeFiles/demo.dir/src/process.cpp.i
+
+CMakeFiles/demo.dir/src/process.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/process.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huruji/repos/v8-with-libuv/src/process.cpp -o CMakeFiles/demo.dir/src/process.cpp.s
+
 CMakeFiles/demo.dir/src/util.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/src/util.cpp.o: ../src/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo.dir/src/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/src/util.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/util.cpp.o -c /Users/huruji/repos/v8-with-libuv/src/util.cpp
 
 CMakeFiles/demo.dir/src/util.cpp.i: cmake_force
@@ -92,19 +118,38 @@ CMakeFiles/demo.dir/src/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/util.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huruji/repos/v8-with-libuv/src/util.cpp -o CMakeFiles/demo.dir/src/util.cpp.s
 
+CMakeFiles/demo.dir/src/v8_type.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/src/v8_type.cpp.o: ../src/v8_type.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/src/v8_type.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/src/v8_type.cpp.o -c /Users/huruji/repos/v8-with-libuv/src/v8_type.cpp
+
+CMakeFiles/demo.dir/src/v8_type.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/src/v8_type.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/huruji/repos/v8-with-libuv/src/v8_type.cpp > CMakeFiles/demo.dir/src/v8_type.cpp.i
+
+CMakeFiles/demo.dir/src/v8_type.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/src/v8_type.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/huruji/repos/v8-with-libuv/src/v8_type.cpp -o CMakeFiles/demo.dir/src/v8_type.cpp.s
+
 # Object files for target demo
 demo_OBJECTS = \
+"CMakeFiles/demo.dir/src/app.cpp.o" \
 "CMakeFiles/demo.dir/src/index.cpp.o" \
-"CMakeFiles/demo.dir/src/util.cpp.o"
+"CMakeFiles/demo.dir/src/process.cpp.o" \
+"CMakeFiles/demo.dir/src/util.cpp.o" \
+"CMakeFiles/demo.dir/src/v8_type.cpp.o"
 
 # External object files for target demo
 demo_EXTERNAL_OBJECTS =
 
+demo: CMakeFiles/demo.dir/src/app.cpp.o
 demo: CMakeFiles/demo.dir/src/index.cpp.o
+demo: CMakeFiles/demo.dir/src/process.cpp.o
 demo: CMakeFiles/demo.dir/src/util.cpp.o
+demo: CMakeFiles/demo.dir/src/v8_type.cpp.o
 demo: CMakeFiles/demo.dir/build.make
 demo: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -13,4 +13,6 @@ link_libraries(uv)
 link_directories(deps/v8/out/x64.release/obj)
 link_libraries(v8_monolith)
 
-add_executable(demo src/index.cpp src/util.h src/util.cpp)
+aux_source_directory(src DIR_SRCS)
+
+add_executable(demo ${DIR_SRCS})

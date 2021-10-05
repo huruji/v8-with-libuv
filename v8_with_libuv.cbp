@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="v8_with_libuv"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/huruji/repos/v8-with-libuv"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/huruji/repos/v8-with-libuv"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/huruji/repos/v8-with-libuv"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="demo">
+				<Option output="/Users/huruji/repos/v8-with-libuv/demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/huruji/repos/v8-with-libuv"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/libuv/include"/>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/v8/include"/>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/v8/include/platform"/>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/v8"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 demo"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="demo/fast">
+				<Option output="/Users/huruji/repos/v8-with-libuv/demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/huruji/repos/v8-with-libuv"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/libuv/include"/>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/v8/include"/>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/v8/include/platform"/>
+					<Add directory="/Users/huruji/repos/v8-with-libuv/deps/v8"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 demo/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/huruji/repos/v8-with-libuv/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/app.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/app.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/index.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/process.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/process.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/util.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/util.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/v8_type.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/v8_type.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

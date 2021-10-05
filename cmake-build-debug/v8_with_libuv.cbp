@@ -88,16 +88,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/app.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/app.h">
+			<Option target="demo"/>
+		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/index.cpp">
 			<Option target="demo"/>
 		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/index.h">
 			<Option target="demo"/>
 		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/process.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/process.h">
+			<Option target="demo"/>
+		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/util.cpp">
 			<Option target="demo"/>
 		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/util.h">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/v8_type.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/v8_type.h">
 			<Option target="demo"/>
 		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/CMakeLists.txt">

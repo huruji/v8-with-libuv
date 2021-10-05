@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/huruji/repos/v8-with-libuv/src/app.cpp" "/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles/demo.dir/src/app.cpp.o"
   "/Users/huruji/repos/v8-with-libuv/src/index.cpp" "/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles/demo.dir/src/index.cpp.o"
+  "/Users/huruji/repos/v8-with-libuv/src/process.cpp" "/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles/demo.dir/src/process.cpp.o"
   "/Users/huruji/repos/v8-with-libuv/src/util.cpp" "/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles/demo.dir/src/util.cpp.o"
+  "/Users/huruji/repos/v8-with-libuv/src/v8_type.cpp" "/Users/huruji/repos/v8-with-libuv/cmake-build-debug/CMakeFiles/demo.dir/src/v8_type.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
