@@ -85,6 +85,12 @@
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/index.cpp">
 			<Option target="demo"/>
 		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/node.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/node.h">
+			<Option target="demo"/>
+		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/process.cpp">
 			<Option target="demo"/>
 		</Unit>

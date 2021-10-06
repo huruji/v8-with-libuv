@@ -1,3 +1,0 @@
-/Users/huruji/repos/v8-with-libuv/CMakeFiles/rebuild_cache.dir
-/Users/huruji/repos/v8-with-libuv/CMakeFiles/edit_cache.dir
-/Users/huruji/repos/v8-with-libuv/CMakeFiles/demo.dir
