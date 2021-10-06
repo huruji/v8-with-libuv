@@ -7,6 +7,7 @@
 #include "../deps/v8/include/v8.h"
 #include "../deps/libuv/include/uv.h"
 #include "./app.h"
+#include "./process.h"
 
 using namespace v8;
 using namespace std;
@@ -30,10 +31,10 @@ int main(int argc, char* argv[]) {
     app.createPlatform(argv);
     app.createVM();
 
-    if (argc < 2) {
-        app.ShutdownVM();
-        return 0;
-    }
+//    if (argc < 2) {
+//        app.ShutdownVM();
+//        return 0;
+//    }
 
     const char* filename = "./src/node.js";
 
@@ -43,11 +44,11 @@ int main(int argc, char* argv[]) {
 
     uv_idle_init(uv_default_loop(), &idler);
 
-    std::cout << "dle start" << std::endl;
+//    std::cout << "dle start" << std::endl;
 
-    uv_idle_start(&idler, my_idle_cb);
+//    uv_idle_start(&idler, my_idle_cb);
 
-    std::cout << "next" << std::endl;
+//    std::cout << "next" << std::endl;
 
 
     uv_run(uv_default_loop(), UV_RUN_DEFAULT);

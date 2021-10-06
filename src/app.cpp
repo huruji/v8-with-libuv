@@ -1,5 +1,17 @@
 #include "app.h"
 
+void log(const FunctionCallbackInfo<Value>& args) {
+    for(int i = 0; i < args.Length(); i++) {
+        if(i > 0) {
+            fprintf(stdout, "");
+        }
+        String::Utf8Value str(args.GetIsolate(), args[i]);
+        const char* cstr = *str;
+        fprintf(stdout, "%s", cstr);
+    }
+    fprintf(stdout, "\n");
+}
+
 
 void App::createPlatform(char *argv[]) {
     // v8 初始化
@@ -26,11 +38,17 @@ void App::ShutdownVM() {
 
 void App::initGlobal(int argc, char *argv[]) {
     this->global = v8::ObjectTemplate::New(this->isolate);
+    this->global->Set(this->isolate, "log", FunctionTemplate::New(this->isolate, log));
 }
 
 void App::setupGlobal(int argc, char *argv[]) {
     Local<Object> globalInstance = this->context->Global();
     Local<Object> node = Object::New(this->isolate);
+
+
+    Process process(this->context, this->isolate);
+    process.init(argc, argv);
+
 //    node->Set(this->context, v8_str("version"), v8_str("1.0.0"));
 //    Local<Array> arguments = Array::New(this->isolate, argc);
 //    for (int i = 0; i < argc; i++) {

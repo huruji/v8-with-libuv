@@ -2,6 +2,7 @@
 #define V8_WITH_LIBUV_APP_H
 #include "../deps/v8/include/libplatform/libplatform.h"
 #include "v8_type.h"
+#include "process.h"
 using namespace v8;
 
 
