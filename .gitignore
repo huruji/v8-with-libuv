@@ -1,3 +1,5 @@
 Testing
 
-cmake-build-debug/
+cmake-build-debug
+
+CMakeFiles
