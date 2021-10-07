@@ -97,6 +97,12 @@
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/process.h">
 			<Option target="demo"/>
 		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/timer.cpp">
+			<Option target="demo"/>
+		</Unit>
+		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/timer.h">
+			<Option target="demo"/>
+		</Unit>
 		<Unit filename="/Users/huruji/repos/v8-with-libuv/src/util.cpp">
 			<Option target="demo"/>
 		</Unit>

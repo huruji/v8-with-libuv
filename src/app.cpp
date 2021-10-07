@@ -43,21 +43,12 @@ void App::initGlobal(int argc, char *argv[]) {
 
 void App::setupGlobal(int argc, char *argv[]) {
     Local<Object> globalInstance = this->context->Global();
-    Local<Object> node = Object::New(this->isolate);
+    Node node(this->context, this->isolate);
+    node.init(argc, argv);
 
 
     Process process(this->context, this->isolate);
     process.init(argc, argv);
-
-//    node->Set(this->context, v8_str("version"), v8_str("1.0.0"));
-//    Local<Array> arguments = Array::New(this->isolate, argc);
-//    for (int i = 0; i < argc; i++) {
-//        arguments->Set(this->context, Number::New(this->isolate, i), v8_str(argv[i]));
-//    }
-//    node->Set(this->context, v8_str("ARGV"), arguments);
-//    node->Set(this->context, v8_str("ReadFile"), Function::New(this->context, getFileContent).ToLocalChecked());
-//    node->Set(this->context, v8_str("Compile"), Function::New(this->context, compile).ToLocalChecked());
-    globalInstance->Set(this->context, v8_str("NODE"), node);
 }
 
 char *App::readFile(const char *filename) {

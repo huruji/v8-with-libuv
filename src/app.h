@@ -3,6 +3,7 @@
 #include "../deps/v8/include/libplatform/libplatform.h"
 #include "v8_type.h"
 #include "process.h"
+#include "node.h"
 using namespace v8;
 
 

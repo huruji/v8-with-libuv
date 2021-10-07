@@ -25,33 +25,28 @@ void my_idle_cb(uv_idle_t* handle)
     }
 }
 
+static void once_cb(uv_timer_t* handle) {
+    printf("data");
+    int a = *(int *)handle->data;
+    cout << a << endl;
+    printf("ONCE_CB %d\n");
+}
 
 int main(int argc, char* argv[]) {
     App app;
     app.createPlatform(argv);
     app.createVM();
 
-//    if (argc < 2) {
-//        app.ShutdownVM();
-//        return 0;
-//    }
-
     const char* filename = "./src/node.js";
+
+//    uv_idle_t idler;
+//
+//    uv_idle_init(uv_default_loop(), &idler);
+
+    uv_run(uv_default_loop(), UV_RUN_DEFAULT);
 
     app.runJSFile(argc, argv, filename);
 
-    uv_idle_t idler;
-
-    uv_idle_init(uv_default_loop(), &idler);
-
-//    std::cout << "dle start" << std::endl;
-
-//    uv_idle_start(&idler, my_idle_cb);
-
-//    std::cout << "next" << std::endl;
-
-
-    uv_run(uv_default_loop(), UV_RUN_DEFAULT);
 
     app.ShutdownVM();
     return 0;

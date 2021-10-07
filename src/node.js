@@ -1,3 +1,17 @@
+
+function setTimeout(callback, delay) {
+    var timer = new node.Timer();
+    timer.start(delay, 0, callback);
+    return timer;
+}
+
+function clearTimeout(timer) {
+    timer.stop();
+    delete timer;
+}
+
+
+
 function Console(stdout, stderr) {
     if (!(this instanceof Console)) {
         return new Console(stdout, stderr);
@@ -17,6 +31,12 @@ Console.prototype.error = function () {
 }
 
 this.console = new Console();
+
+
+
+
+
+
 
 
 
@@ -41,10 +61,12 @@ Module.prototype.compile = function(filename) {
 
 ;(function() {
 
-    if (!process.ARGV[1]) {
-        return
-    }
-    const mainFile = process.ARGV[1];
+    // if (!process.ARGV[1]) {
+    //     return
+    // }
+
+    // const mainFile = process.ARGV[1];
+    const mainFile = "./test/app.js";
 
     const main = new Module(mainFile);
     main.compile(mainFile);
