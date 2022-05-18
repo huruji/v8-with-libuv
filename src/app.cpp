@@ -1,17 +1,19 @@
 #include "app.h"
 
-void log(const FunctionCallbackInfo<Value>& args) {
-    for(int i = 0; i < args.Length(); i++) {
-        if(i > 0) {
-            fprintf(stdout, "");
-        }
-        String::Utf8Value str(args.GetIsolate(), args[i]);
-        const char* cstr = *str;
-        fprintf(stdout, "%s", cstr);
-    }
-    fprintf(stdout, "\n");
+
+inline bool ShouldAbortOnUncaughtException(v8::Isolate *isolate) {
+    fprintf(stderr, "ShouldAbortOnUncaughtException\n");
+    return true;
+}
+inline void OnFatalError(const char *location, const char *message) {
+    fprintf(stderr, "FATAL ERROR: %s %s\n", location, message);
+    fflush(stderr);
 }
 
+inline void OOMErrorHandler(const char *location, bool is_heap_oom) {
+    fprintf(stderr, "OOM ERROR: %s %i\n", location, is_heap_oom);
+    fflush(stderr);
+}
 
 void App::createPlatform(char *argv[]) {
     // v8 初始化
@@ -38,14 +40,12 @@ void App::ShutdownVM() {
 
 void App::initGlobal(int argc, char *argv[]) {
     this->global = v8::ObjectTemplate::New(this->isolate);
-    this->global->Set(this->isolate, "log", FunctionTemplate::New(this->isolate, log));
 }
 
 void App::setupGlobal(int argc, char *argv[]) {
     Local<Object> globalInstance = this->context->Global();
     Node node(this->context, this->isolate);
-    node.init(argc, argv);
-
+    node.init(argc, argv, this->loop);
 
     Process process(this->context, this->isolate);
     process.init(argc, argv);
@@ -75,11 +75,17 @@ char *App::readFile(const char *filename) {
 }
 
 void App::runScriptString(int argc, char *argv[], const char *scriptString) {
+    this->isolate->SetAbortOnUncaughtExceptionCallback(ShouldAbortOnUncaughtException);
+    this->isolate->SetFatalErrorHandler(OnFatalError);
+    this->isolate->SetOOMErrorHandler(OOMErrorHandler);
     // 进入 scope
     v8::Isolate::Scope isolate_scope(this->isolate);
     v8::HandleScope handle_scope(this->isolate);
     this->initGlobal(argc, argv);
     this->context = v8::Context::New(this->isolate, NULL, this->global);
+    Environment *env = new Environment();
+    env->AssignToContext(this->context);
+    env->loop = uv_default_loop();
     v8::Context::Scope context_scope(this->context);
     this->setupGlobal(argc, argv);
     v8::Local<v8::String> source = v8_str(scriptString);

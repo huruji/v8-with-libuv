@@ -15,4 +15,4 @@ link_libraries(v8_monolith)
 
 aux_source_directory(src DIR_SRCS)
 
-add_executable(demo ${DIR_SRCS})
+add_executable(demo ${DIR_SRCS} src/common.h src/env.h)

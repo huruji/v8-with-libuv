@@ -7,13 +7,15 @@
 #include "v8_type.h"
 #include "../deps/libuv/include/uv.h"
 #include "./timer.h"
+#include "./app.h"
 
 class Node {
 public:
     v8::Local<v8::Context> context;
     Isolate* isolate;
+    uv_loop_t* loop;
 public:
-    void init(int argc, char* argv[]);
+    void init(int argc, char* argv[], uv_loop_t* loop);
 
     Node(v8::Local<v8::Context> context, Isolate* isolate) {
         this->context = context;

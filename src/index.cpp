@@ -36,18 +36,28 @@ int main(int argc, char* argv[]) {
     App app;
     app.createPlatform(argv);
     app.createVM();
+    app.loop = uv_default_loop();
 
     const char* filename = "./src/node.js";
 
 //    uv_idle_t idler;
 //
 //    uv_idle_init(uv_default_loop(), &idler);
-
-    uv_run(uv_default_loop(), UV_RUN_DEFAULT);
-
     app.runJSFile(argc, argv, filename);
+    bool more;
+    do {
+        v8::platform::PumpMessageLoop(app.platform.get(), app.isolate);
+        more = uv_run(app.loop, UV_RUN_DEFAULT);
+        if (more == false) {
+            v8::platform::PumpMessageLoop(app.platform.get(), app.isolate);
+            more = uv_loop_alive(app.loop);
+            int isRun = uv_run(app.loop, UV_RUN_NOWAIT);
+            if (uv_run(app.loop, UV_RUN_NOWAIT) != 0) {
+                more = true;
+            }
+        }
 
-
-    app.ShutdownVM();
+    } while (more == true);
+//    app.ShutdownVM();
     return 0;
 }

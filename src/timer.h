@@ -6,21 +6,19 @@
 #define V8_WITH_LIBUV_TIMER_H
 #include "../deps/libuv/include/uv.h"
 #include "v8_type.h"
+#include "./app.h"
+#include "./common.h"
 
-class Timer {
+class Timer : public common::ObjectWrap {
 public:
-    Local<Object> target;
-    v8::Local<v8::Context> context;
-    Isolate* isolate;
+    uv_timer_t *handle;
+    static void New(const v8::FunctionCallbackInfo<v8::Value> &args);
 
 public:
-    Timer(v8::Local<v8::Context> context, Isolate *isolate, Local<Object> target){
-        this->target = target;
-        this->context = context;
-        this->isolate = isolate;
-    }
+    Timer(){}
 
-    void init();
+    void init(Local<Object> target);
+//    void Wrap(v8::Local<v8::Object> handle);
 };
 
 #endif //V8_WITH_LIBUV_TIMER_H

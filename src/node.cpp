@@ -3,12 +3,13 @@
 //
 #include "node.h"
 
-void Node::init(int argc, char* argv[]) {
+void Node::init(int argc, char* argv[], uv_loop_t* loop) {
+    this->loop = loop;
     Local<Object> globalInstance = this->context->Global();
 
     Local<Object> node = Object::New(this->isolate);
-    Timer timer(this->context, this->isolate, node);
-    timer.init();
+    Timer timer;
+    timer.init(node);
 
     globalInstance->Set(this->context, v8_str("node"), node);
 }
